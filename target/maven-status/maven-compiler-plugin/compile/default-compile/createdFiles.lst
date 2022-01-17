@@ -1,0 +1,15 @@
+com\turnero\NoCountry\repositorios\EmpresaRepositorio.class
+com\turnero\NoCountry\repositorios\SucursalRepositorio.class
+com\turnero\NoCountry\enums\Role.class
+com\turnero\NoCountry\entidades\Ventas.class
+com\turnero\NoCountry\entidades\Cliente.class
+com\turnero\NoCountry\entidades\TipoCliente.class
+com\turnero\NoCountry\entidades\Empresa.class
+com\turnero\NoCountry\excepciones\WebException.class
+com\turnero\NoCountry\servicios\EmpresaServicio.class
+com\turnero\NoCountry\entidades\Usuario.class
+com\turnero\NoCountry\entidades\Ciudad.class
+com\turnero\NoCountry\servicios\SucursalServicio.class
+com\turnero\NoCountry\entidades\Producto.class
+com\turnero\NoCountry\entidades\Sucursal.class
+com\turnero\NoCountry\entidades\Provincia.class
