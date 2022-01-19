@@ -31,8 +31,10 @@ public class Sucursal implements Serializable {
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
-    
+    private String nombre;
     private String direccion;
+    
+  
     
     private String Telefono;
     

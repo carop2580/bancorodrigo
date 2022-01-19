@@ -13,19 +13,19 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface SucursalRepositorio extends JpaRepository<Sucursal, String> {
     
-     @Query("select j from Empresa j where j.nombre LIKE :query")
+     @Query("select j from Sucursal j where j.nombre LIKE :query")
     List<Sucursal> findAllByQ(@Param("query") String query);
 
-    @Query("select j from Empresa j where j.id = :id")
+    @Query("select j from Sucursal j where j.id = :id")
     Sucursal encontrarPorId(@Param("id") String id);
 
-    @Query("select j from Empresa j where j.provincia.provincia = :q")
+    @Query("select j from Sucursal j where j.provincia.provincia = :q")
     List<Sucursal> findAllByProvincia(@Param("q") String q);
 
-    @Query("select j from Empresa j where j.ciudad.ciudad = :q")
+    @Query("select j from Sucursal j where j.ciudad.ciudad = :q")
     List<Sucursal> findAllByCiudad(@Param("q") String q);
 
     @Override
-    @Query("select j from Empresa j order by j.nombre")
+    @Query("select j from Sucursal j order by j.nombre")
     List<Sucursal> findAll();
 }
