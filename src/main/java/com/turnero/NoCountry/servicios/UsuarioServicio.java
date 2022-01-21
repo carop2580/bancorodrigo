@@ -1,14 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.turnero.NoCountry.servicios;
 
-/**
- *
- * @author nicol
- */
+import com.turnero.NoCountry.dto.UsuarioDTO;
+import java.util.List;
+
+
 public interface UsuarioServicio {
     
+    UsuarioDTO save(UsuarioDTO dto);
+   
+   List<UsuarioDTO> getAllUsuarios();
+
+    public Object getAllUsuarios(String q);
 }

@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface SucursalRepositorio extends JpaRepository<Sucursal, String> {
+public interface SucursalRepositorio extends JpaRepository<Sucursal, Long> {
     
      @Query("select j from Sucursal j where j.nombre LIKE :query")
     List<Sucursal> findAllByQ(@Param("query") String query);

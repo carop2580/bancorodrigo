@@ -11,11 +11,13 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -25,24 +27,17 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Data
 @Entity
+@Table (name = "Sucursal")
 public class Sucursal implements Serializable {
 
     @Id
-    @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid", strategy = "uuid2")
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id_sucursal;
     private String nombre;
     private String direccion;
-    
-  
-    
     private String Telefono;
-    
     private String Email;
-    
-   
     private String provincia;
-    
     private String ciudad;
   
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
@@ -50,6 +45,6 @@ public class Sucursal implements Serializable {
     private Usuario usuario;
     
     @Column(name = "usuario_id", nullable = false)
-    private String usuarioId;
+    private Long id_usuario;
 
 }

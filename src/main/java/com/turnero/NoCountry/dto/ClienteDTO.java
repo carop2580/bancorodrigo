@@ -1,14 +1,34 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.turnero.NoCountry.dto;
 
-/**
- *
- * @author nicol
- */
+import java.util.Date;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class ClienteDTO {
     
+    private Long id_cliente;
+    
+    private String nombre;
+    
+    private String apellido;
+    
+    private String dni;
+    
+     private Date FechaNacimiento;    
+    private String direccion;    
+    private String cp;
+    
+    private String provincia;     
+    
+    private String telefono;
+    
+      private String Ciudad; 
+   
+    
+    private String email;
+    
+     private Long id_TipoCliente;
 }

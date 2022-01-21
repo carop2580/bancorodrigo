@@ -1,25 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.turnero.NoCountry.repositorios;
 
 import com.turnero.NoCountry.entidades.Usuario;
+import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-/**
- *
- * @author nicol
- */
+
 @Repository
-public interface UsuarioRepositorio extends JpaRepository<Usuario, String>{
+public interface UsuarioRepositorio extends JpaRepository<Usuario, Long>{
 
     @Query("select u from Usuario u where u.username = :username")
     Usuario findByUserName(@Param("username") String username);
+    
+      @Query("select j from Usuario j where j.nombre LIKE :query")
+    List<Usuario> findAllByQ(@Param("query") Long query);
+
+    @Query("select j from Usuario j where j.id = :id")
+    Usuario encontrarPorId(@Param("id") Long id);
     }
     

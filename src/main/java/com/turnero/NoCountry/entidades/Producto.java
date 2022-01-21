@@ -8,6 +8,7 @@ package com.turnero.NoCountry.entidades;
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
@@ -20,9 +21,8 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 public class Producto implements Serializable, Comparable  {
     @Id
-    @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid", strategy = "uuid2")
-    private String id;
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id_producto;
     
     private String producto;
 

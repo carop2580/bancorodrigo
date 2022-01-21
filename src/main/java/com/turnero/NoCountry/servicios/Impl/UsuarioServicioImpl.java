@@ -1,6 +1,8 @@
 
 package com.turnero.NoCountry.servicios.Impl;
 
+import com.turnero.NoCountry.Mapper.UsuarioMapper;
+import com.turnero.NoCountry.dto.UsuarioDTO;
 import com.turnero.NoCountry.entidades.Usuario;
 import com.turnero.NoCountry.enums.Role;
 import com.turnero.NoCountry.excepciones.WebException;
@@ -27,6 +29,24 @@ public class UsuarioServicioImpl implements UserDetailsService {
 
       @Autowired
     private UsuarioRepositorio usuarioRepositorio;
+      
+     @Autowired
+     private UsuarioMapper usuarioMapper;
+     
+     public UsuarioDTO save(UsuarioDTO dto){
+        Usuario entidad = usuarioMapper.UsuarioDTO2Entity(dto);
+        Usuario entitySaved = usuarioRepositorio.save(entidad);
+        UsuarioDTO result = usuarioMapper.UsuarioDTO2Entity(entitySaved);
+        return result;
+     }
+
+    
+    public List<UsuarioDTO> getAllUsuarios() {
+    
+        List <Usuario> entities = usuarioRepositorio.findAll();
+        List <UsuarioDTO> result = usuarioMapper.UsuarioList2DTOList(entities);
+        return result;
+    }
 
    @Transactional
     public void save(Usuario usuario) throws WebException, IOException {
@@ -58,7 +78,7 @@ public class UsuarioServicioImpl implements UserDetailsService {
         }
 
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        usuario.setId(usuario.getId());
+        usuario.setId_usuario(usuario.getId_usuario());
         usuario.setUsername(usuario.getUsername());
         usuario.setPassword(encoder.encode(usuario.getPassword()));
 
@@ -75,7 +95,7 @@ public class UsuarioServicioImpl implements UserDetailsService {
         return usuarioRepositorio.findByUserName(username);
     }
 
-    public Optional<Usuario> findById(String id) {
+    public Optional<Usuario> findById(Long id) {
         return usuarioRepositorio.findById(id);
     }
 

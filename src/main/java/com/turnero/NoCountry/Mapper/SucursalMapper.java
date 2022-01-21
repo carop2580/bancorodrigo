@@ -26,7 +26,7 @@ public class SucursalMapper {
     public SucursalDTO SucursalDTO2Entity(Sucursal entidad){
     
         SucursalDTO dto = new SucursalDTO();
-        dto.setId(entidad.getId());
+        dto.setId_sucursal(entidad.getId_sucursal());
         dto.setNombre(entidad.getNombre());
         dto.setDireccion(entidad.getDireccion());
         dto.setCiudad(entidad.getCiudad());

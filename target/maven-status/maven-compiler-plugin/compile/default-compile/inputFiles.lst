@@ -22,6 +22,7 @@ C:\Users\nicol\Documents\Proyectos java\TurneroNoCrountry\src\main\java\com\turn
 C:\Users\nicol\Documents\Proyectos java\TurneroNoCrountry\src\main\java\com\turnero\NoCountry\dto\ClienteDTO.java
 C:\Users\nicol\Documents\Proyectos java\TurneroNoCrountry\src\main\java\com\turnero\NoCountry\dto\SucursalDTO.java
 C:\Users\nicol\Documents\Proyectos java\TurneroNoCrountry\src\main\java\com\turnero\NoCountry\servicios\Impl\ProductoServicioImpl.java
+C:\Users\nicol\Documents\Proyectos java\TurneroNoCrountry\src\main\java\com\turnero\NoCountry\Mapper\ClienteMapper.java
 C:\Users\nicol\Documents\Proyectos java\TurneroNoCrountry\src\main\java\com\turnero\NoCountry\servicios\Impl\ClienteServicioImpl.java
 C:\Users\nicol\Documents\Proyectos java\TurneroNoCrountry\src\main\java\com\turnero\NoCountry\repositorios\UsuarioRepositorio.java
 C:\Users\nicol\Documents\Proyectos java\TurneroNoCrountry\src\main\java\com\turnero\NoCountry\repositorios\TipoClienteRepositorio.java
@@ -38,6 +39,7 @@ C:\Users\nicol\Documents\Proyectos java\TurneroNoCrountry\src\main\java\com\turn
 C:\Users\nicol\Documents\Proyectos java\TurneroNoCrountry\src\main\java\com\turnero\NoCountry\Mapper\SucursalMapper.java
 C:\Users\nicol\Documents\Proyectos java\TurneroNoCrountry\src\main\java\com\turnero\NoCountry\servicios\ProductoServicio.java
 C:\Users\nicol\Documents\Proyectos java\TurneroNoCrountry\src\main\java\com\turnero\NoCountry\controladores\TipoClienteControlador.java
+C:\Users\nicol\Documents\Proyectos java\TurneroNoCrountry\src\main\java\com\turnero\NoCountry\Mapper\UsuarioMapper.java
 C:\Users\nicol\Documents\Proyectos java\TurneroNoCrountry\src\main\java\com\turnero\NoCountry\servicios\ClienteServicio.java
 C:\Users\nicol\Documents\Proyectos java\TurneroNoCrountry\src\main\java\com\turnero\NoCountry\servicios\SucursalServicio.java
 C:\Users\nicol\Documents\Proyectos java\TurneroNoCrountry\src\main\java\com\turnero\NoCountry\entidades\Producto.java

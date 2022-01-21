@@ -11,6 +11,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -28,37 +29,43 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Entity
 public class Ventas {
     @Id
-    @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid", strategy = "uuid2")
-    private String id;
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String id_venta;
     
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "usuario_id", insertable = false, updatable = false)
+   // @JoinColumn(name = "usuario_id", insertable = false, updatable = false)
     private Usuario usuario;
     
-    @Column(name = "usuario_id", nullable = false)
-    private String usuarioId;
+    //@Column(name = "usuario_id", nullable = false)
+    private Long id_usuario;
+    
+     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+   // @JoinColumn(name = "usuario_id", insertable = false, updatable = false)
+    private Sucursal sucursal;
+    
+    //@Column(name = "usuario_id", nullable = false)
+    private Long id_sucursal;
     
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "producto_id", insertable = false, updatable = false)
+  //  @JoinColumn(name = "producto_id", insertable = false, updatable = false)
     private Producto producto;
     
-    @Column(name = "producto_id", nullable = false)
-    private String productoId;
+   // @Column(name = "producto_id", nullable = false)
+    private Long id_producto;
     
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "cliente_id", insertable = false, updatable = false)
+   // @JoinColumn(name = "cliente_id", insertable = false, updatable = false)
     private Cliente cliente;
     
-    @Column(name = "cliente_id", nullable = false)
-    private String clienteId;
+  //  @Column(name = "cliente_id", nullable = false)
+    private Long id_cliente;
     
     private Double monto;
     
-    @Column(name = "cliente_interes")
+   // @Column(name = "cliente_interes")
     private Double tasaInteres;
     
-    @Column(name = "fecha_venta")
+   // @Column(name = "fecha_venta")
     @DateTimeFormat(pattern= ("yyyy-MM-dd HH:mm:ss"))
     private LocalDate fechaContrato;
    

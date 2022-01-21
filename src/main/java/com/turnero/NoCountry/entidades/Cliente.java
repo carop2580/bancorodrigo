@@ -12,6 +12,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -30,10 +31,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Setter
 @Entity
 public class Cliente implements Serializable {
-    @Id
-    @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid", strategy = "uuid2")
-    private String id;
+   @Id
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id_cliente;
     
     private String nombre;
     
@@ -59,9 +59,9 @@ public class Cliente implements Serializable {
     private String email;
     
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "tipo_cliente_id", insertable = false, updatable = false)
+   // @JoinColumn(name = "tipo_cliente_id", insertable = false, updatable = false)
     private TipoCliente tipoCliente;
     
-    @Column(name = "cliente_id", nullable = false)
-    private String tipoClienteId;
+    @Column(name = "id_TipoCliente", nullable = false)
+    private Long id_TipoCliente;
 }
