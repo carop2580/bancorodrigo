@@ -40,6 +40,10 @@ public class UsuarioServicioImpl implements UserDetailsService {
         return result;
      }
 
+     public List<Usuario> findAllByQ (String q){
+         List<Usuario> lista = usuarioRepositorio.findAllByQ("%" + q + "%");
+         return lista;
+     }
     
     public List<UsuarioDTO> getAllUsuarios() {
     

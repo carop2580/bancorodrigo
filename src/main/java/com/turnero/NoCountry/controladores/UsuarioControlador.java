@@ -21,7 +21,7 @@ public class UsuarioControlador {
     @GetMapping("/list")
     public String listarUsuarios(Model model,@RequestParam(required = false) String q) {
         if (q != null) {
-            model.addAttribute("usuarios", usuarioServicio.getAllUsuarios(q));
+            model.addAttribute("usuarios", usuarioServicio.findAllByQ(q));
         }else{
             model.addAttribute("usuarios", usuarioServicio.getAllUsuarios());
         }

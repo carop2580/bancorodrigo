@@ -12,15 +12,18 @@
                     enable: true
  #Configuraci\u00f3n MySQL
   datasource: 
-    url: jdbc:mysql://localhost:3306/banco?allowPublicKeyRetrieval=true&useSSL=false&useTimezone=true&serverTimezone=GMT&characterEncoding=UTF-8
-    username: root
-    password: root
+    
+    url: jdbc:mysql://i0rgccmrx3at3wv3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/e39d2cvgu4rjiej2?allowPublicKeyRetrieval=true&useSSL=false&useTimezone=true&serverTimezone=GMT&characterEncoding=UTF-8
+    username: t2uqwaayxrlzfggq
+    password: pv6umixpwcyuui39
     driver-class-name: com.mysql.cj.jdbc.Driver 
+    
 #Configuraci\u00f3n Creaci\u00f3n de tablas (Hibernate)
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
+      
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect      
@@ -29,4 +32,6 @@
     cache: false 
   main:
     banner-mode: off
-
+    
+  
+      

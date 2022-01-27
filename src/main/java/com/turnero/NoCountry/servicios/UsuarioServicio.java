@@ -2,6 +2,7 @@
 package com.turnero.NoCountry.servicios;
 
 import com.turnero.NoCountry.dto.UsuarioDTO;
+import com.turnero.NoCountry.entidades.Usuario;
 import java.util.List;
 
 
@@ -11,5 +12,6 @@ public interface UsuarioServicio {
    
    List<UsuarioDTO> getAllUsuarios();
 
-    public Object getAllUsuarios(String q);
+  
+    public List<Usuario> findAllByQ(String q);
 }

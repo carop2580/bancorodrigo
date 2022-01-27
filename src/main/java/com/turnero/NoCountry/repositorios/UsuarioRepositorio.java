@@ -16,8 +16,9 @@ public interface UsuarioRepositorio extends JpaRepository<Usuario, Long>{
     @Query("select u from Usuario u where u.username = :username")
     Usuario findByUserName(@Param("username") String username);
     
-      @Query("select j from Usuario j where j.nombre LIKE :query")
-    List<Usuario> findAllByQ(@Param("query") Long query);
+      @Query("select j from Usuario j where j.username LIKE :query or"
+              + "j.sucursal.nombre LIKE :query")
+    List<Usuario> findAllByQ(@Param("query") String query);
 
     @Query("select j from Usuario j where j.id = :id")
     Usuario encontrarPorId(@Param("id") Long id);
